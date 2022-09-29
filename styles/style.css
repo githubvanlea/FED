@@ -1,3 +1,20 @@
+
+/*********/
+/* Fonts */
+/*********/
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* @font-face {
+    font-family: Dunkin;
+    src: url(/fonts/dunkin/Dunkin\ Bold.otf);
+} */
+
+@font-face {
+    font-family: Dunkin;
+    src: url(/fonts/Dunkin.otf);
+}
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -9,31 +26,411 @@ button, summary {
 	cursor: pointer;
 }
 
+/* custom properties */
 
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+    --general-background: white;
+    --general-color: white;
+    --orange-color: #FF6F0C;
+    --extra-orange: #ED4C28;
+    --pink-color: #E0368E;
+    --kleurrozelink: #F951AD;
+    --grey-background: #F5F5F5;
+    --extra-grey: #696868; /* #929191; #C2BCBC; */
+    --kleurfoto1: #D9BF94;
+    --kleurfoto2: #A5D5E6;
 }
 
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
+/* hierna komt de algemene css styling */
 
 body {
-  color:var(--color-text);
-  background-color:var(--color-background);
+    margin: 0;
 }
 
+h1 { 
+    position: fixed;
+    left: -9999em;
+}
+
+h2 {
+    font-family: Dunkin;
+    font-size: 2em;
+    color: var(--general-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+/* styling voor de header */
+
+header p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: .8em;
+    color: var(--general-color);
+    background-color: var(--orange-color);
+    margin-top: 0;
+    padding: .75em;
+    text-align: center;
+}
+
+header img {
+    height: 3em;
+    width: 9em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+}
+
+header nav button{
+    appearance: none;
+    background-color: var(--grey-background);
+    border-radius: 0.8em;
+    border: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    position: relative;
+    z-index: 100;
+}
+
+header nav button img {
+    height: 1.5em;
+    width: 1.3em;
+}
+
+nav ul { 
+    margin: 0; 
+    padding: 4em 1em 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1em;
+    align-content:start;
+    background:var(--general-background);
+
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+
+    transform:translatex(100%);
+    transition:transform .3s;
+}
+
+/* als menu open is */
+
+nav.open ul {
+    transform:translatex(0);
+}
+
+/* algemene styling voor de main */
+
+main>section {
+    gap: 1em;
+} 
+
+/* styling voor eerste section "we love coffee"*/
+
+main>section:nth-of-type(1) {
+    background-color: var(--kleurfoto1);
+    padding-bottom: .2em;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+main>section:nth-of-type(1) h2 {
+    padding-top: .5em;
+    font-size: 2.5em;
+}
+
+main>section:nth-of-type(1) img {
+    width: 21em;
+    height: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* styling voor tweede section "bestel!"*/
+
+main>section:nth-of-type(2) {
+    background-color: var(--pink-color);
+    margin: 1em;
+    border-radius: 2em;
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+}
+
+main>section:nth-of-type(2) h2 {
+    font-size: 2.5em;
+
+    grid-column-start:1;
+    grid-column-end:-1;
+}
+
+main>section:nth-of-type(2) p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 0.8em;
+    color: var(--general-color);
+    margin:0;
+    grid-column-start:1;
+    grid-column-end:-1;
+}
+
+main>section:nth-of-type(2) a {
+    font-family: Dunkin;
+    text-decoration: none;
+    color: var(--general-color);
+    background-color: var(--kleurrozelink);
+    border-radius: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    display:block;
+    text-align: center;
+}
+
+main>section:nth-of-type(2) a:hover {
+    cursor: pointer;
+    background-color: var(--general-color);
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(2) a:focus {
+    background-color: var(--general-color);
+    color: var(--pink-color);
+}
+
+/* styling voor derde section "dunkin' x ajax"*/
+
+main>section:nth-of-type(3) {
+    background-color: var(--kleurfoto2);
+    padding-bottom: .2em;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+main>section:nth-of-type(3) h2 {
+    padding-top: .5em;
+    font-size: 2.5em;
+}
+
+main>section:nth-of-type(3) img {
+    width: 21em;
+    height: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 1.4em;
+}
+
+/* styling voor vierde section "bestel dunkin' online"*/
+
+main>section:nth-of-type(4) {
+    background-color: var(--grey-background);
+    padding-bottom: 1em;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+main>section:nth-of-type(4) h2 {
+    margin: 0;
+}
+
+main>section:nth-of-type(4) h2:nth-of-type(1) {
+    color: var(--pink-color);
+    padding-top: .5em;
+    font-size: 2.7em;
+}
+
+main>section:nth-of-type(4) h2:nth-of-type(2) {
+    color: var(--orange-color);
+    font-size: 2.7em;
+}
+
+main>section:nth-of-type(4) h2:nth-of-type(3) {
+    color: var(--pink-color);
+    font-size: 2.7em;
+}
+
+main>section:nth-of-type(4) ol {
+    font-family: Dunkin;
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(4) h3 {
+    font-family: Dunkin;
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(4) p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 0.9em;
+    color: var(--extra-grey);
+}
+
+main>section:nth-of-type(4) a {
+    font-family: Dunkin;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    text-decoration: none;
+    color: var(--general-color);
+    background-color: var(--orange-color);
+    border-radius: 2em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+main>section:nth-of-type(4) a:hover {
+    cursor: pointer;
+    background-color: var(--orange-color);
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(4) a:focus {
+    background-color: var(--orange-color);
+    color: var(--pink-color);
+}
+
+/* styling voor vijfde section "dd nieuws"*/
+
+main>section:nth-of-type(5) {
+    background-color: var(--grey-background);
+    padding-bottom: 1em;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+main>section:nth-of-type(5) h2 {
+    margin: 0;
+}
+
+main>section:nth-of-type(5) h2:nth-of-type(1) {
+    color: var(--orange-color);
+    padding-top: .5em;
+    font-size: 2.7em;
+}
+
+main>section:nth-of-type(5) h2:nth-of-type(2) {
+    color: var(--pink-color);
+    font-size: 2.7em;
+    padding-bottom: 0.25em;
+}
+
+main>section:nth-of-type(5) a {
+    font-family: Dunkin;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    text-decoration: none;
+    color: var(--general-color);
+    background-color: var(--orange-color);
+    border-radius: 2em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+main>section:nth-of-type(5) a:hover {
+    cursor: pointer;
+    background-color: var(--orange-color);
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(5) a:focus {
+    background-color: var(--orange-color);
+    color: var(--pink-color);
+}
+
+main>section:nth-of-type(5) img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14em;
+    height: 16em;
+    padding-top: 1em;
+}
+
+main>section:nth-of-type(5) button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main>section:nth-of-type(5) button:first-of-type {
+    border-radius: 1em;
+    background-color: var(--grey-background);
+    width: 3.5em;
+    height: 3.5em;
+}
+
+main>section:nth-of-type(5) button:nth-of-type(2) {
+    border-radius: 1em;
+    background-color: var(--grey-background);
+    width: 3.5em;
+    height: 3.5em;
+}
+
+main>section:nth-of-type(5) button p {
+    color: var(--extra-grey);
+}
+
+/* styling voor de footer */
+
+footer {
+    background-color: var(--orange-color);
+    margin: 0;
+}
+
+footer li {
+    list-style-type: none;
+    background-color: var(--extra-orange);
+    border-radius: 2em;
+    width: 88%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+footer a {
+    font-family: Dunkin;
+    text-decoration: none;
+    color: var(--general-color);
+    padding-left: 3em;
+}
+
+ul {
+    padding-top: 1em;
+    list-style-type: none;
+  }
+
+footer img {
+    width: 5em;
+    height: 4.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+
+footer p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 0.8em;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+    background-color: var(--general-background);
+    color: var(--extra-grey);
+}
