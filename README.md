@@ -210,26 +210,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-
-
-
 ## Voortgang 3 (week 4)
 
 <details>
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/voortgang3.1jpg">
+  <img src="readme-images/voortgang3.2jpg">
+
+  De buttons kwamen maar niet in het midden, maar uiteindelijk is dat gelukt. 
+
+  Voor de tweede pagina heb ik een dropdown gemaakt d.m.v. de details tag.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  samen met je groepje opstellen: Dit voortgangsgesprek doe ik alleen. Dit zijn de punten waar ik het over wil hebben.
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  - de zoek locatie balk in het midden
+  - de items in het midden van het dropdown menu
+  - display: grid 
+  - Dunkin' afbeelding/ logo in het midden
+  - buttons DD nieuws naast elkaar
 
 
   ### Verslag van meeting
